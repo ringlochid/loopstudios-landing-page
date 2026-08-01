@@ -1,5 +1,7 @@
 import './index.css'
 
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
+
 function App() {
 
   return (
@@ -8,16 +10,16 @@ function App() {
         {/* ===== HERO SECTION ===== */}
         <header className="px-6 lg:px-20 py-10 w-full h-162.5 relative flex flex-col justify-center items-center">
           <picture className="absolute inset-0 w-full h-full">
-            <source media="(min-width: 768px)" srcSet="/images/desktop/image-hero.jpg" />
-            <img className="w-full h-full object-cover" src="/images/mobile/image-hero.jpg" alt="" />
+            <source media="(min-width: 768px)" srcSet={asset('images/desktop/image-hero.jpg')} />
+            <img className="w-full h-full object-cover" src={asset('images/mobile/image-hero.jpg')} alt="" />
           </picture>
           <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
           <div className="w-full lg:max-w-[69.375rem] lg:mx-auto px-6 relative flex flex-col justify-between items-start flex-1">
             <nav aria-label="Primary" className="self-stretch inline-flex justify-between items-center">
-              <a href="/" aria-label="Loopstudios home"><img src="/images/logo.svg" alt="Loopstudios" /></a>
+              <a href={import.meta.env.BASE_URL} aria-label="Loopstudios home"><img src={asset('images/logo.svg')} alt="Loopstudios" /></a>
               {/* Mobile hamburger */}
               <button type="button" aria-label="Open menu" className="lg:hidden cursor-pointer bg-transparent border-none p-0">
-                <img src="/images/icon-hamburger.svg" alt="" className="w-6 h-4" />
+                <img src={asset('images/icon-hamburger.svg')} alt="" className="w-6 h-4" />
               </button>
               {/* Desktop nav links */}
               <div className="hidden lg:flex items-center gap-8">
@@ -41,8 +43,8 @@ function App() {
           <div className="w-full lg:max-w-[69.375rem] lg:mx-auto flex flex-col lg:flex-row lg:items-end gap-12 lg:gap-0 lg:relative">
             <div className="w-full lg:w-[55%] relative bg-colors-blue-50">
               <picture>
-                <source media="(min-width: 768px)" srcSet="/images/desktop/image-interactive.jpg" />
-                <img className="w-full object-cover" src="/images/mobile/image-interactive.jpg" alt="Interactive VR" />
+                <source media="(min-width: 768px)" srcSet={asset('images/desktop/image-interactive.jpg')} />
+                <img className="w-full object-cover" src={asset('images/mobile/image-interactive.jpg')} alt="Interactive VR" />
               </picture>
             </div>
             <div className="w-full lg:w-[50%] lg:absolute lg:right-0 lg:bottom-0 lg:bg-colors-white lg:pt-24 lg:pl-24 flex flex-col justify-start items-center lg:items-start gap-4">
@@ -66,8 +68,8 @@ function App() {
             {/* Deep Earth */}
             <div className="self-stretch h-30 md:h-50 lg:h-[28.75rem] relative overflow-hidden group cursor-pointer">
               <picture className="absolute inset-0 w-full h-full">
-                <source media="(min-width: 768px)" srcSet="/images/desktop/image-deep-earth.jpg" />
-                <img className="w-full h-full object-cover" src="/images/mobile/image-deep-earth.jpg" alt="Deep Earth" />
+                <source media="(min-width: 768px)" srcSet={asset('images/desktop/image-deep-earth.jpg')} />
+                <img className="w-full h-full object-cover" src={asset('images/mobile/image-deep-earth.jpg')} alt="Deep Earth" />
               </picture>
               <div className="absolute inset-0 bg-linear-to-r lg:bg-linear-to-t from-black/60 to-black/0 group-hover:from-white/70 group-hover:to-white/70  transition-all" />
               <h3 className="absolute bottom-5 left-5 text-colors-white text-2xl font-light font-josefin uppercase leading-6 group-hover:text-colors-black transition-colors">DEEP<br/>EARTH</h3>
@@ -76,8 +78,8 @@ function App() {
             {/* Night Arcade */}
             <div className="self-stretch h-30 md:h-50 lg:h-[28.75rem] relative overflow-hidden group cursor-pointer">
               <picture className="absolute inset-0 w-full h-full">
-                <source media="(min-width: 768px)" srcSet="/images/desktop/image-night-arcade.jpg" />
-                <img className="w-full h-full object-cover" src="/images/mobile/image-night-arcade.jpg" alt="Night Arcade" />
+                <source media="(min-width: 768px)" srcSet={asset('images/desktop/image-night-arcade.jpg')} />
+                <img className="w-full h-full object-cover" src={asset('images/mobile/image-night-arcade.jpg')} alt="Night Arcade" />
               </picture>
               <div className="absolute inset-0 bg-linear-to-r lg:bg-linear-to-t from-black/60 to-black/0 group-hover:from-white/70 group-hover:to-white/70 transition-all" />
               <h3 className="absolute bottom-5 left-5 text-colors-white text-2xl font-light font-josefin uppercase leading-6 group-hover:text-colors-black transition-colors">NIGHT<br/>ARCADE</h3>
@@ -86,8 +88,8 @@ function App() {
             {/* Soccer Team VR */}
             <div className="self-stretch h-30 md:h-50 lg:h-[28.75rem] relative overflow-hidden group cursor-pointer">
               <picture className="absolute inset-0 w-full h-full">
-                <source media="(min-width: 768px)" srcSet="/images/desktop/image-soccer-team.jpg" />
-                <img className="w-full h-full object-cover" src="/images/mobile/image-soccer-team.jpg" alt="Soccer Team VR" />
+                <source media="(min-width: 768px)" srcSet={asset('images/desktop/image-soccer-team.jpg')} />
+                <img className="w-full h-full object-cover" src={asset('images/mobile/image-soccer-team.jpg')} alt="Soccer Team VR" />
               </picture>
               <div className="absolute inset-0 bg-linear-to-r lg:bg-linear-to-t from-black/60 to-black/0 group-hover:from-white/70 group-hover:to-white/70 transition-all" />
               <h3 className="absolute bottom-5 left-5 text-colors-white text-2xl font-light font-josefin uppercase leading-6 group-hover:text-colors-black transition-colors">SOCCER<br/>TEAM VR</h3>
@@ -96,8 +98,8 @@ function App() {
             {/* The Grid */}
             <div className="self-stretch h-30 md:h-50 lg:h-[28.75rem] relative overflow-hidden group cursor-pointer">
               <picture className="absolute inset-0 w-full h-full">
-                <source media="(min-width: 768px)" srcSet="/images/desktop/image-grid.jpg" />
-                <img className="w-full h-full object-cover" src="/images/mobile/image-grid.jpg" alt="The Grid" />
+                <source media="(min-width: 768px)" srcSet={asset('images/desktop/image-grid.jpg')} />
+                <img className="w-full h-full object-cover" src={asset('images/mobile/image-grid.jpg')} alt="The Grid" />
               </picture>
               <div className="absolute inset-0 bg-linear-to-r lg:bg-linear-to-t from-black/60 to-black/0 group-hover:from-white/70 group-hover:to-white/70 transition-all" />
               <h3 className="absolute bottom-5 left-5 text-colors-white text-2xl font-light font-josefin uppercase leading-6 group-hover:text-colors-black transition-colors">THE<br/>GRID</h3>
@@ -106,8 +108,8 @@ function App() {
             {/* From Up Above VR */}
             <div className="self-stretch h-30 md:h-50 lg:h-[28.75rem] relative overflow-hidden group cursor-pointer">
               <picture className="absolute inset-0 w-full h-full">
-                <source media="(min-width: 768px)" srcSet="/images/desktop/image-from-above.jpg" />
-                <img className="w-full h-full object-cover" src="/images/mobile/image-from-above.jpg" alt="From Up Above VR" />
+                <source media="(min-width: 768px)" srcSet={asset('images/desktop/image-from-above.jpg')} />
+                <img className="w-full h-full object-cover" src={asset('images/mobile/image-from-above.jpg')} alt="From Up Above VR" />
               </picture>
               <div className="absolute inset-0 bg-linear-to-r lg:bg-linear-to-t from-black/60 to-black/0 group-hover:from-white/70 group-hover:to-white/70 transition-all" />
               <h3 className="absolute bottom-5 left-5 text-colors-white text-2xl font-light font-josefin uppercase leading-6 group-hover:text-colors-black transition-colors">FROM UP<br/>ABOVE VR</h3>
@@ -116,8 +118,8 @@ function App() {
             {/* Pocket Borealis */}
             <div className="self-stretch h-30 md:h-50 lg:h-[28.75rem] relative overflow-hidden group cursor-pointer">
               <picture className="absolute inset-0 w-full h-full">
-                <source media="(min-width: 768px)" srcSet="/images/desktop/image-pocket-borealis.jpg" />
-                <img className="w-full h-full object-cover" src="/images/mobile/image-pocket-borealis.jpg" alt="Pocket Borealis" />
+                <source media="(min-width: 768px)" srcSet={asset('images/desktop/image-pocket-borealis.jpg')} />
+                <img className="w-full h-full object-cover" src={asset('images/mobile/image-pocket-borealis.jpg')} alt="Pocket Borealis" />
               </picture>
               <div className="absolute inset-0 bg-linear-to-r lg:bg-linear-to-t from-black/60 to-black/0 group-hover:from-white/70 group-hover:to-white/70 transition-all" />
               <h3 className="absolute bottom-5 left-5 text-colors-white text-2xl font-light font-josefin uppercase leading-6 group-hover:text-colors-black transition-colors">POCKET<br/>BOREALIS</h3>
@@ -126,8 +128,8 @@ function App() {
             {/* The Curiosity */}
             <div className="self-stretch h-30 md:h-50 lg:h-[28.75rem] relative overflow-hidden group cursor-pointer">
               <picture className="absolute inset-0 w-full h-full">
-                <source media="(min-width: 768px)" srcSet="/images/desktop/image-curiosity.jpg" />
-                <img className="w-full h-full object-cover" src="/images/mobile/image-curiosity.jpg" alt="The Curiosity" />
+                <source media="(min-width: 768px)" srcSet={asset('images/desktop/image-curiosity.jpg')} />
+                <img className="w-full h-full object-cover" src={asset('images/mobile/image-curiosity.jpg')} alt="The Curiosity" />
               </picture>
               <div className="absolute inset-0 bg-linear-to-r lg:bg-linear-to-t from-black/60 to-black/0 group-hover:from-white/70 group-hover:to-white/70 transition-all" />
               <h3 className="absolute bottom-5 left-5 text-colors-white text-2xl font-light font-josefin uppercase leading-6 group-hover:text-colors-black transition-colors">THE<br/>CURIOSITY</h3>
@@ -136,8 +138,8 @@ function App() {
             {/* Make It Fisheye */}
             <div className="self-stretch h-30 md:h-50 lg:h-[28.75rem] relative overflow-hidden group cursor-pointer">
               <picture className="absolute inset-0 w-full h-full">
-                <source media="(min-width: 768px)" srcSet="/images/desktop/image-fisheye.jpg" />
-                <img className="w-full h-full object-cover" src="/images/mobile/image-fisheye.jpg" alt="Make It Fisheye" />
+                <source media="(min-width: 768px)" srcSet={asset('images/desktop/image-fisheye.jpg')} />
+                <img className="w-full h-full object-cover" src={asset('images/mobile/image-fisheye.jpg')} alt="Make It Fisheye" />
               </picture>
               <div className="absolute inset-0 bg-linear-to-r lg:bg-linear-to-t from-black/60 to-black/0 group-hover:from-white/70 group-hover:to-white/70 transition-all" />
               <h3 className="absolute bottom-5 left-5 text-colors-white text-2xl font-light font-josefin uppercase leading-6 group-hover:text-colors-black transition-colors">MAKE IT<br/>FISHEYE</h3>
@@ -155,15 +157,15 @@ function App() {
         <footer className="w-full bg-colors-black py-14 flex flex-col items-center">
           <div className="w-full lg:max-w-[69.375rem] lg:mx-auto px-6 lg:px-20 flex flex-col md:grid md:grid-cols-2 items-center md:items-stretch gap-8 md:gap-6">
             {/* Row 1 left: Logo */}
-            <a href="/" aria-label="Loopstudios home" className="md:justify-self-start">
-              <img src="/images/logo.svg" alt="Loopstudios" />
+            <a href={import.meta.env.BASE_URL} aria-label="Loopstudios home" className="md:justify-self-start">
+              <img src={asset('images/logo.svg')} alt="Loopstudios" />
             </a>
             {/* Row 1 right: Social icons */}
             <div className="flex justify-center md:justify-end items-center gap-4 order-3 md:order-0">
-              <a href="#"><img src="/images/icon-facebook.svg" alt="Facebook" className="w-6 h-6" /></a>
-              <a href="#"><img src="/images/icon-twitter.svg" alt="Twitter" className="w-6 h-5" /></a>
-              <a href="#"><img src="/images/icon-pinterest.svg" alt="Pinterest" className="w-6 h-6" /></a>
-              <a href="#"><img src="/images/icon-instagram.svg" alt="Instagram" className="w-6 h-6" /></a>
+              <a href="#"><img src={asset('images/icon-facebook.svg')} alt="Facebook" className="w-6 h-6" /></a>
+              <a href="#"><img src={asset('images/icon-twitter.svg')} alt="Twitter" className="w-6 h-5" /></a>
+              <a href="#"><img src={asset('images/icon-pinterest.svg')} alt="Pinterest" className="w-6 h-6" /></a>
+              <a href="#"><img src={asset('images/icon-instagram.svg')} alt="Instagram" className="w-6 h-6" /></a>
             </div>
             {/* Row 2 left: Nav links */}
             <nav aria-label="Footer" className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 order-2 md:order-0">
